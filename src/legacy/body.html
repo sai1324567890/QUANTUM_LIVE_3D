@@ -1,0 +1,534 @@
+<canvas id="bg3d"></canvas>
+<nav id="gnav" aria-label="Site"><a class="br" href="#top"><svg width="26" height="26" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="#E8F0F6" stroke-width="1.5"/><ellipse cx="15" cy="15" rx="12" ry="4.2" fill="none" stroke="#E8F0F6" stroke-width="1" opacity=".5"/><line x1="15" y1="15" x2="22" y2="7" stroke="#FF7A59" stroke-width="2.5" stroke-linecap="round"/><circle cx="22" cy="7" r="2.6" fill="#FF7A59"/></svg>Quantum Hub</a><a class="l" href="#ask" style="color:#3CCFD0">Ask AI</a><span class="grp">Hub</span><a class="l" href="#overview">What it is</a><a class="l" href="#why">Why</a><a class="l" href="#pillars">Technologies</a><a class="l" href="#how">How</a><a class="l" href="#hardware">Hardware</a><a class="l" href="#uses">Uses</a><a class="l" href="#lab">Concept lab</a><a class="l" href="#future">Future</a><a class="l" href="#path">Path</a><a class="l" href="#practice">Practice</a><a class="l" href="#projects">Projects</a><span class="grp">Course</span><a class="l" href="#universe">3D Universe</a><a class="l" href="#m1">Modules</a><a class="l" href="#qlab">Quantum Lab</a><a class="l" href="#road">Roadmap</a><a class="l" href="#quiz">Quiz</a><a class="l" href="#proj">Projects</a><span class="grp">Platforms</span><a class="l" href="#platforms">IBM · Microsoft · Google</a><a class="l" href="#courses">Study plan</a><a class="l" href="#qiskit">Qiskit 3D</a><a class="l" href="#googleq">Google AI</a><a class="l" href="#studio">Sim studio</a><span class="grp">More</span><a class="l" href="#kb">Knowledge base</a><a class="l" href="#faq">FAQ</a><a class="l" href="#pricing">Plans</a><button class="tgl" id="themeBtn" type="button" aria-label="Toggle light and dark theme">☀ Light</button><button class="tgl" id="authBtn" type="button" style="margin-left:8px">Sign in</button></nav>
+
+<div class="qh-d">
+<header class="aihero" id="ask"><div class="w">
+<span class="ey">AI-powered quantum simulator</span>
+<h1>Ask any quantum question. Get a live 3D simulation.</h1>
+<p class="lead">Type a question about quantum technology, physics or computing. The simulator picks the best matching interactive 3D model, then you change its parameters and watch the concept respond in real time.</p>
+<div class="askbox"><input id="aq" type="text" placeholder="e.g. Why does measuring a qubit collapse it?" aria-label="Ask a quantum or science question" autocomplete="off"><button id="agen" type="button">Generate Simulation</button></div>
+<div class="chips" id="aex"></div><div id="amsg" role="status"></div>
+<div class="asim" id="asim" hidden>
+<div class="pnl"><canvas id="gsc" width="900" height="560"></canvas><div class="rd" id="gread"></div><div style="font-size:12px;color:#8FA4B6;margin-top:6px">Drag the scene to rotate it. It spins on its own when idle.</div></div>
+<div class="pnl"><h3 id="gt"></h3><div id="gctl"></div><div class="fm" id="gfm"></div><div id="gexp"></div><div id="glink" style="margin-top:8px"></div></div>
+</div>
+</div></header>
+<div class="adslot" data-slot="hero"></div>
+<div class="modal" id="amod" role="dialog" aria-modal="true" aria-label="Account"><div class="mbox" id="mbox"></div></div>
+</div>
+
+
+
+<div class="qh-b">
+
+
+<div class="hero">
+  <canvas id="hero3d" aria-label="Animated 3D scene: a Bloch sphere with a precessing qubit, orbiting electrons and an entangled pair" role="img"></canvas>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="eyebrow">Quantum technology hub</span>
+      <h1>From the first qubit to the <em>fault-tolerant</em> future.</h1>
+      <p class="lead">What quantum technology is, why it exists, where it already works, what it may do next, and how to learn it from basic to advanced. Every concept has a long explanation and a live simulation you can break and rebuild.</p>
+      <div class="cta">
+        <a class="btn" href="#overview">Start with the basics</a>
+        <a class="btn ghost" href="#lab">Jump to the concept lab</a>
+        <a class="btn ghost" href="#universe">Enter the 3D course</a>
+      </div>
+      <div class="hero-stats" id="hero-stats"></div>
+      <p class="hint">Drag the scene to rotate it.</p>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section id="overview">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">What it is</span>
+        <h2>Quantum physics, quantum technology and quantum computing are three different things</h2>
+        <p>People use the words as if they meant the same thing. Separating them makes everything else on this page easier to follow.</p>
+      </div>
+      <div class="cols3">
+        <div>
+          <h3>Quantum physics</h3>
+          <p>The rules that govern matter and light at the scale of atoms and below. Energy comes in discrete packets called quanta. Particles also behave like waves. A system can be in a superposition of several states until it is measured, and the result of a measurement is random, with probabilities set by the state.</p>
+          <p>These rules have been tested for a century. They already underpin transistors, lasers, LEDs, solar cells, MRI scanners and atomic clocks. That is often called the first quantum revolution.</p>
+        </div>
+        <div>
+          <h3>Quantum technology</h3>
+          <p>The second quantum revolution. Instead of using quantum effects as a side effect inside bulk materials, engineers now build and control individual quantum systems on purpose: single atoms, ions, photons, electron spins and superconducting circuits.</p>
+          <p>Four families result: computing, communication, sensing and simulation. They share the same ingredients (superposition, interference, entanglement) and the same enemy (noise from the environment).</p>
+        </div>
+        <div>
+          <h3>Quantum computing</h3>
+          <p>One branch of quantum technology. A quantum computer stores information in qubits and runs algorithms that steer probability amplitudes so that wrong answers cancel and the right answer is likely to be measured.</p>
+          <p>It is not a faster laptop. It is a different kind of machine that gives large advantages on some problems, small ones on others, and none on most everyday tasks.</p>
+        </div>
+      </div>
+
+      <h3 class="sub">A bit against a qubit</h3>
+      <div class="tbl">
+        <table>
+          <thead><tr><th>Property</th><th>Classical bit</th><th>Qubit</th></tr></thead>
+          <tbody>
+            <tr><td>State</td><td>0 or 1</td><td>α|0⟩ + β|1⟩ with complex α, β and |α|² + |β|² = 1</td></tr>
+            <tr><td>n of them</td><td>One of 2ⁿ values at a time</td><td>2ⁿ complex amplitudes at once, but reading gives only n bits</td></tr>
+            <tr><td>Reading</td><td>Does not disturb the value</td><td>Measurement is random and collapses the state</td></tr>
+            <tr><td>Copying</td><td>Free</td><td>Impossible for an unknown state (no-cloning theorem)</td></tr>
+            <tr><td>Operations</td><td>Logic gates, many irreversible (AND, OR)</td><td>Unitary gates, always reversible</td></tr>
+            <tr><td>Correlation</td><td>Shared randomness</td><td>Entanglement, which can violate Bell inequalities</td></tr>
+            <tr><td>Errors</td><td>Around 10⁻¹⁷ per operation in a modern chip</td><td>Around 10⁻³ to 10⁻² per operation on today’s devices</td></tr>
+            <tr><td>Hardware</td><td>Silicon transistors at room temperature</td><td>Superconducting circuits, ions, atoms, photons or spins, often near absolute zero or in vacuum</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Why it exists</span>
+        <h2>The purpose: do what classical machines cannot do efficiently</h2>
+        <p>Quantum technology is not built for speed in general. It is built for four specific jobs.</p>
+      </div>
+      <div class="twocol">
+        <div class="prose">
+          <p><b>1. Simulate nature.</b> In 1981 Richard Feynman pointed out that a classical computer needs exponentially more resources to track a quantum system, so the natural simulator is another quantum system. Molecules, catalysts, magnets and superconductors are the target.</p>
+          <p><b>2. Solve certain mathematical problems with fewer steps.</b> Shor’s algorithm factors large integers in polynomial time. Grover’s algorithm searches unstructured data with a quadratic speedup. Other algorithms help with linear algebra, sampling and estimating averages.</p>
+          <p><b>3. Measure more precisely.</b> A quantum probe such as an atom or a spin is extremely sensitive to magnetic fields, gravity, rotation and time. Quantum sensors already tell time for satellite navigation and image brain activity.</p>
+          <p><b>4. Communicate with physics-backed security.</b> Measuring an unknown quantum state disturbs it, so eavesdropping on a quantum key exchange leaves a detectable trace. Quantum networks will also link quantum computers together.</p>
+        </div>
+        <div class="sim" id="sim-statespace"></div>
+      </div>
+
+      <h3 class="sub">Why the speedup is real for some problems</h3>
+      <div class="twocol">
+        <div class="prose">
+          <p>The best known classical algorithm for factoring, the general number field sieve, takes time that grows faster than any polynomial in the number of digits. Shor’s algorithm grows roughly as the cube of the number of bits. The chart shows the shape of that gap on a log scale. It ignores constant factors and the large overhead of error correction, so read it as a statement about how the cost grows, not as a prediction of run time.</p>
+          <p>For unstructured search the gain is smaller. Grover gives a square-root speedup, which turns 10¹² steps into 10⁶ queries but does not make hard problems easy.</p>
+        </div>
+        <div class="sim" id="sim-scaling"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pillars">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Technologies</span>
+        <h2>Four families of quantum technology</h2>
+        <p>Computing gets the headlines, but communication and sensing are further along commercially.</p>
+      </div>
+      <div class="tiltgrid g4" id="pillar-grid">
+        <article class="tilt">
+          <div class="row1"><h3>Quantum computing</h3><span class="tag research">Research, early cloud</span></div>
+          <p>Qubits plus gates plus measurement. Three models exist: gate-based (circuits, the one on this page), annealing (optimisation by slowly changing a Hamiltonian) and analog (a device that directly mimics one physical system).</p>
+          <dl>
+            <div><dt>Today</dt><dd>Hundreds to a few thousand noisy physical qubits, cloud access, first small logical qubits with error correction.</dd></div>
+            <div><dt>Next</dt><dd>Error-corrected machines with hundreds of logical qubits and billions of operations.</dd></div>
+          </dl>
+        </article>
+        <article class="tilt">
+          <div class="row1"><h3>Quantum communication</h3><span class="tag use">In use</span></div>
+          <p>Quantum key distribution (BB84, E91) shares encryption keys whose secrecy rests on physics. Quantum networks send entangled photons between nodes, and repeaters will extend range beyond the roughly one hundred kilometres loss allows in fibre.</p>
+          <dl>
+            <div><dt>Today</dt><dd>Fibre QKD networks including China’s Beijing to Shanghai backbone, satellite links since the Micius satellite in 2016, and European EuroQCI plans.</dd></div>
+            <div><dt>Next</dt><dd>Entanglement distribution, a quantum internet, and linking separate quantum processors.</dd></div>
+          </dl>
+        </article>
+        <article class="tilt">
+          <div class="row1"><h3>Quantum sensing</h3><span class="tag early">Early commercial</span></div>
+          <p>A superposition accumulates phase in proportion to a field or to elapsed time. Reading that phase gives extreme sensitivity. Atomic clocks, diamond NV magnetometers, atom interferometers and squeezed-light detectors all work this way.</p>
+          <dl>
+            <div><dt>Today</dt><dd>Atomic clocks in satellite navigation, wearable magnetoencephalography, quantum gravimeters in field trials, squeezed light in gravitational-wave detectors.</dd></div>
+            <div><dt>Next</dt><dd>Navigation without GPS, mineral and water mapping, cheaper medical imaging, entangled sensor arrays.</dd></div>
+          </dl>
+        </article>
+        <article class="tilt">
+          <div class="row1"><h3>Quantum simulation</h3><span class="tag pilot">Pilots</span></div>
+          <p>Analog simulators use cold atoms in optical lattices, Rydberg atom arrays or trapped ions as a stand-in for a material you cannot compute. Digital simulation uses a gate-based computer to evolve the same model step by step.</p>
+          <dl>
+            <div><dt>Today</dt><dd>Studies of magnetism, phase transitions and dynamics at sizes that stress classical methods.</dd></div>
+            <div><dt>Next</dt><dd>Chemistry and materials with accuracy that classical approximations cannot reach.</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <h3 class="sub">Post-quantum cryptography is not quantum technology</h3>
+      <div class="prose">
+        <p>It is classical mathematics, run on ordinary computers, designed to resist attacks from quantum computers. NIST published its first three post-quantum standards in 2024: ML-KEM (FIPS 203) for key exchange, and ML-DSA (FIPS 204) and SLH-DSA (FIPS 205) for signatures. Most organisations will migrate to these long before they ever buy a QKD link, because they run on existing networks and hardware. The two approaches are complementary.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">How it is used</span>
+        <h2>A quantum computer is an accelerator inside a classical workflow</h2>
+        <p>Nobody runs a whole application on a quantum chip. A classical program prepares the problem, calls the quantum processor for the one step it does well, and processes the answer.</p>
+      </div>
+      <div class="flow">
+        <div><b>Find the structure</b><span>Decide whether the problem has the hidden structure a quantum algorithm exploits, such as periodicity, a Hamiltonian, or a searchable oracle.</span></div>
+        <div><b>Encode</b><span>Map the problem onto qubits: a molecule becomes a Hamiltonian of Pauli operators, a search becomes an oracle, a graph becomes a cost function.</span></div>
+        <div><b>Compile</b><span>Break the circuit into the device’s native gates, route it across the qubit connectivity, and shorten it as much as possible.</span></div>
+        <div><b>Run in shots</b><span>Execute the circuit thousands of times. Each shot ends in a random measurement, and the distribution holds the answer.</span></div>
+        <div><b>Mitigate or correct</b><span>Reduce the damage from noise with error mitigation today, and with error-correcting codes on future machines.</span></div>
+        <div><b>Post-process</b><span>Classical code turns the counts into the final result, for example continued fractions in Shor’s algorithm or an optimiser update in VQE.</span></div>
+      </div>
+
+      <div class="twocol" style="margin-top:44px">
+        <div>
+          <h3 class="sub" style="margin-top:0">The hybrid stack</h3>
+          <div class="stack" aria-label="Layers of a quantum computing stack, top to bottom">
+            <div><b>Application</b>Chemistry, finance or logistics code in Python.</div>
+            <div><b>Algorithm library</b>VQE, QAOA, phase estimation, amplitude estimation.</div>
+            <div><b>SDK and compiler</b>Qiskit, Cirq, PennyLane, Braket, Q#.</div>
+            <div><b>Classical control</b>FPGAs and microwave or laser electronics, real-time decoders.</div>
+            <div><b>Quantum control layer</b>Pulses, calibration, readout.</div>
+            <div><b>Quantum processor</b>Qubits in a cryostat, a vacuum chamber or a photonic chip.</div>
+          </div>
+        </div>
+        <div class="prose">
+          <h3 class="sub" style="margin-top:0">How you can use one today</h3>
+          <p>Several vendors offer cloud access to real quantum processors, including IBM Quantum, Amazon Braket, Azure Quantum and the cloud services of ion-trap, neutral-atom and photonic companies. Free tiers or credits exist on some of them, so check current terms. All the major SDKs also ship simulators that run on a laptop.</p>
+          <p>A sensible path is to write circuits for 2 to 5 qubits, run them on a simulator first, then run the same circuit on real hardware and compare the two histograms. The difference between them is a direct picture of noise.</p>
+          <p>Quantum sensors and QKD systems are bought as instruments. They plug into existing navigation, imaging or network equipment and need no quantum programming.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="hardware">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Hardware</span>
+        <h2>Eight ways to build a qubit</h2>
+        <p>No platform has won. Each trades speed, fidelity, connectivity and manufacturability differently, and the field keeps changing, so treat the company names as examples rather than a ranking.</p>
+      </div>
+      <div class="tiltgrid g4">
+        <article class="tilt"><h3>Superconducting circuits</h3>
+          <p>A small circuit with a Josephson junction behaves as an artificial atom. Chips are cooled to about 10 to 20 millikelvin and driven with microwave pulses.</p>
+          <dl><div><dt>Strengths</dt><dd>Gates in tens to hundreds of nanoseconds, chip-industry fabrication, large software ecosystem.</dd></div>
+          <div><dt>Challenges</dt><dd>Short coherence (tens to hundreds of microseconds), fixed neighbour connectivity, dense wiring, dilution refrigerators.</dd></div>
+          <div><dt>Examples</dt><dd>IBM, Google, Rigetti, IQM, Alice &amp; Bob.</dd></div></dl></article>
+        <article class="tilt"><h3>Trapped ions</h3>
+          <p>Individual charged atoms are held in electric fields and laser-cooled. Their internal energy levels are the qubit, and lasers or microwaves drive the gates.</p>
+          <dl><div><dt>Strengths</dt><dd>Among the highest gate fidelities, coherence of seconds or more, all-to-all connectivity within a trap.</dd></div>
+          <div><dt>Challenges</dt><dd>Slower gates (microseconds to milliseconds), growing the number of ions per trap, precise optics.</dd></div>
+          <div><dt>Examples</dt><dd>Quantinuum, IonQ, Alpine Quantum Technologies.</dd></div></dl></article>
+        <article class="tilt"><h3>Neutral atoms</h3>
+          <p>Atoms such as rubidium or strontium are held in arrays by focused laser beams called optical tweezers. Exciting them to Rydberg states makes neighbours interact and entangle.</p>
+          <dl><div><dt>Strengths</dt><dd>Hundreds to thousands of qubits, reconfigurable geometry, no cryostat, natural for analog simulation.</dd></div>
+          <div><dt>Challenges</dt><dd>Atom loss, slower cycle times, continuous reloading and mid-circuit readout.</dd></div>
+          <div><dt>Examples</dt><dd>QuEra, Pasqal, Atom Computing, Infleqtion.</dd></div></dl></article>
+        <article class="tilt"><h3>Photonic</h3>
+          <p>Photons carry the qubit in their path, polarisation, time bin or in squeezed modes of light. Circuits are waveguides on a chip with beam splitters and phase shifters.</p>
+          <dl><div><dt>Strengths</dt><dd>Operates largely at room temperature, natural for networking, compatible with chip manufacturing.</dd></div>
+          <div><dt>Challenges</dt><dd>Photon loss, probabilistic two-photon gates, enormous component counts, fast cryogenic detectors.</dd></div>
+          <div><dt>Examples</dt><dd>PsiQuantum, Xanadu, Quandela.</dd></div></dl></article>
+        <article class="tilt"><h3>Silicon spin qubits</h3>
+          <p>The spin of a single electron, or of a donor nucleus, is trapped in a transistor-like structure and controlled with microwaves and voltages.</p>
+          <dl><div><dt>Strengths</dt><dd>Nanometre size, long coherence in purified silicon, direct path to existing CMOS factories.</dd></div>
+          <div><dt>Challenges</dt><dd>Device-to-device variability, wiring density, reaching high fidelity across many qubits.</dd></div>
+          <div><dt>Examples</dt><dd>Intel, Diraq, Quantum Motion, Silicon Quantum Computing.</dd></div></dl></article>
+        <article class="tilt"><h3>Diamond colour centres</h3>
+          <p>A nitrogen atom next to a missing carbon atom (an NV centre) has a spin that can be initialised and read with light, even at room temperature.</p>
+          <dl><div><dt>Strengths</dt><dd>Room-temperature operation, atom-scale sensor size, optical readout.</dd></div>
+          <div><dt>Challenges</dt><dd>Hard to scale into a computer. Mainly used for sensing and as network nodes.</dd></div>
+          <div><dt>Uses</dt><dd>Magnetometry, nanoscale NMR, quantum memory.</dd></div></dl></article>
+        <article class="tilt"><h3>Quantum annealers</h3>
+          <p>Superconducting flux qubits implement an Ising-type Hamiltonian that is slowly changed so the system settles into a low-energy solution of an optimisation problem.</p>
+          <dl><div><dt>Strengths</dt><dd>Thousands of qubits available today for a specific problem class.</dd></div>
+          <div><dt>Challenges</dt><dd>Not a universal gate-model computer. Whether it beats the best classical heuristics on practical problems is still debated.</dd></div>
+          <div><dt>Examples</dt><dd>D-Wave.</dd></div></dl></article>
+        <article class="tilt"><h3>Topological qubits</h3>
+          <p>An idea in which information lives in non-local properties of exotic quasiparticles, so local noise cannot easily damage it.</p>
+          <dl><div><dt>Strengths</dt><dd>If realised, built-in protection could greatly reduce error-correction overhead.</dd></div>
+          <div><dt>Challenges</dt><dd>Microsoft reported a topological device in 2025, and the physics behind that claim is still being examined by the community.</dd></div>
+          <div><dt>Status</dt><dd>Early research.</dd></div></dl></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="uses">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Where it is used</span>
+        <h2>Applications, and how mature each one really is</h2>
+        <p>The tag on each card says how close the application is to everyday use. Several well-known promises are still research.</p>
+      </div>
+      <div class="tiltgrid g3">
+        <article class="tilt"><div class="row1"><h3>Drug discovery and chemistry</h3><span class="tag research">Research</span></div>
+          <p>Molecular energies are quantum problems. Accurate simulation of reaction mechanisms, binding and enzymes is limited by classical approximations. A widely studied target is the iron-molybdenum cofactor of nitrogenase, which fixes nitrogen in nature.</p>
+          <dl><div><dt>How</dt><dd>Phase estimation on an error-corrected machine, or VQE on small molecules today.</dd></div><div><dt>Reality check</dt><dd>Useful advantage is expected to need fault-tolerant hardware. Today’s demonstrations use small molecules.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Materials and batteries</h3><span class="tag research">Research</span></div>
+          <p>Electrolytes, catalysts, magnets and high-temperature superconductors are hard because electrons interact strongly. Simulating them could guide the search for better batteries and cheaper catalysts.</p>
+          <dl><div><dt>How</dt><dd>Analog simulators for model Hamiltonians now, digital simulation later.</dd></div><div><dt>Reality check</dt><dd>Analog simulators already study idealised models. Real-material accuracy needs larger machines.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Cryptography and security</h3><span class="tag use">In use</span></div>
+          <p>A large fault-tolerant machine running Shor’s algorithm would break RSA and elliptic-curve cryptography. Data stolen today can be decrypted later, so migration is already under way.</p>
+          <dl><div><dt>How</dt><dd>Post-quantum algorithms on classical hardware. QKD in a few high-security links.</dd></div><div><dt>Reality check</dt><dd>NIST plans to deprecate RSA and ECC after 2030 and disallow them from 2035.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Optimisation and logistics</h3><span class="tag pilot">Pilots</span></div>
+          <p>Routing, scheduling, portfolio selection and supply chains are combinatorial. Annealers and QAOA are tried on them by airlines, ports, banks and manufacturers.</p>
+          <dl><div><dt>How</dt><dd>Encode as an Ising or QUBO problem and sample low-energy solutions.</dd></div><div><dt>Reality check</dt><dd>Clear advantage over strong classical solvers has not been shown for practical sizes.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Finance</h3><span class="tag research">Research</span></div>
+          <p>Pricing derivatives and measuring risk rely on Monte Carlo sampling. Amplitude estimation offers a quadratic reduction in the number of samples needed for a given accuracy.</p>
+          <dl><div><dt>How</dt><dd>Amplitude estimation, quantum linear algebra, portfolio optimisation.</dd></div><div><dt>Reality check</dt><dd>The quadratic gain can be eaten by error-correction overhead and the cost of loading data.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>AI and machine learning</h3><span class="tag research">Research</span></div>
+          <p>Ideas include quantum kernels, variational classifiers and faster sampling for generative models. Quantum data from sensors and simulators is a more natural fit than classical images or text.</p>
+          <dl><div><dt>How</dt><dd>Parameterised circuits trained with classical optimisers.</dd></div><div><dt>Reality check</dt><dd>Loading large classical datasets into qubits is a bottleneck, and many proposed speedups have been matched by classical methods.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Energy and climate</h3><span class="tag research">Research</span></div>
+          <p>Fertiliser production by the Haber–Bosch process consumes on the order of one to two percent of the world’s energy. Better catalysts, carbon-capture materials and fusion plasma models are all quantum-simulation targets.</p>
+          <dl><div><dt>How</dt><dd>Quantum chemistry and materials simulation, grid optimisation.</dd></div><div><dt>Reality check</dt><dd>Long-term. Results depend on fault-tolerant machines.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Timing and navigation</h3><span class="tag use">In use</span></div>
+          <p>Atomic clocks keep satellite navigation and telecom networks synchronised. Optical clocks are far more precise, and cold-atom accelerometers and gyroscopes can navigate when GPS is unavailable.</p>
+          <dl><div><dt>How</dt><dd>Ramsey interferometry on atoms, laser-cooled atom interferometers.</dd></div><div><dt>Reality check</dt><dd>Clocks are mature. Atom-based inertial navigation is in field trials.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Medical and brain imaging</h3><span class="tag early">Early commercial</span></div>
+          <p>Optically pumped magnetometers sit in a wearable helmet and record the tiny magnetic fields of brain activity without a bulky cryogenic scanner. Diamond sensors probe single cells and molecules.</p>
+          <dl><div><dt>How</dt><dd>Spin-based magnetometry.</dd></div><div><dt>Reality check</dt><dd>Wearable magnetoencephalography is in research and early clinical use. MRI is built on nuclear spins but is run classically.</dd></div></dl></article>
+        <article class="tilt"><div class="row1"><h3>Telecom and the quantum internet</h3><span class="tag early">Early commercial</span></div>
+          <p>Quantum links will secure key exchange and eventually connect quantum computers into larger distributed machines. Repeaters with quantum memories are the key missing component.</p>
+          <dl><div><dt>How</dt><dd>Entangled photons over fibre or satellite, entanglement swapping and teleportation.</dd></div><div><dt>Reality check</dt><dd>QKD links are deployed. A full entanglement-based internet is a research programme.</dd></div></dl></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="lab">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Concept lab</span>
+        <h2>Twelve concepts, each with a full explanation and a live simulation</h2>
+        <p>Read the text on the left and play with the simulation on the right. Each lesson says what the idea is, how it works, where it is used and what to try. They run roughly from basic to advanced, and each is tagged with its level.</p>
+      </div>
+      <nav class="chipnav" id="lab-index" aria-label="Concept index"></nav>
+      <div class="lessons" id="lessons"></div>
+    </div>
+  </section>
+
+  <section id="future">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">The future</span>
+        <h2>Where quantum technology came from, and where it is heading</h2>
+        <p>The history shows how slowly foundations turn into products. The roadmap shows what hardware companies and standards bodies are planning.</p>
+      </div>
+      <div class="twocol">
+        <div>
+          <h3 class="sub" style="margin-top:0">How we got here</h3>
+          <ol class="tl">
+            <li><span class="yr">1900</span><span class="dot"></span><div><b>Planck introduces the quantum</b><span>Energy is exchanged in discrete packets, which solves the black-body problem.</span></div></li>
+            <li><span class="yr">1925–27</span><span class="dot"></span><div><b>Quantum mechanics is formulated</b><span>Heisenberg, Schrödinger, Born and others set out the rules still used today.</span></div></li>
+            <li><span class="yr">1947–60</span><span class="dot"></span><div><b>The first quantum revolution</b><span>The transistor (1947) and the laser (1960) turn quantum theory into industry.</span></div></li>
+            <li><span class="yr">1981</span><span class="dot"></span><div><b>Feynman proposes quantum simulation</b><span>Nature is quantum, so simulate it with a quantum machine.</span></div></li>
+            <li><span class="yr">1984</span><span class="dot"></span><div><b>BB84 quantum key distribution</b><span>Bennett and Brassard show that physics can protect a key exchange.</span></div></li>
+            <li><span class="yr">1994–96</span><span class="dot"></span><div><b>Shor, error correction, Grover</b><span>Factoring in polynomial time, the first quantum error-correcting codes, and quadratic search.</span></div></li>
+            <li><span class="yr">2019</span><span class="dot"></span><div><b>First beyond-classical claim</b><span>Google reports a random-circuit sampling task on 53 superconducting qubits. Classical researchers later narrowed the gap.</span></div></li>
+            <li><span class="yr">2022</span><span class="dot"></span><div><b>Nobel Prize in Physics</b><span>Aspect, Clauser and Zeilinger are recognised for experiments with entangled photons that established the violation of Bell inequalities.</span></div></li>
+            <li><span class="yr">2024</span><span class="dot"></span><div><b>Error correction below threshold, and PQC standards</b><span>Google reports a surface-code memory whose logical error falls as the code grows. NIST publishes FIPS 203, 204 and 205.</span></div></li>
+          </ol>
+        </div>
+        <div>
+          <h3 class="sub" style="margin-top:0">What is planned next</h3>
+          <ol class="tl">
+            <li class="now"><span class="yr">2026</span><span class="dot"></span><div><b>Modular, error-corrected prototypes</b><span>IBM’s roadmap lists Kookaburra, its first module for storing and processing encoded information. In July 2026 IBM and the University of Chicago announced a 70-logical-qubit sampling experiment they describe as beyond classical simulation. That is a company claim in a preprint, so independent checks are pending.</span></div></li>
+            <li><span class="yr">2027</span><span class="dot"></span><div><b>Linked modules</b><span>IBM’s Cockatoo is planned to join two Kookaburra modules with long-range couplers.</span></div></li>
+            <li><span class="yr">2029</span><span class="dot"></span><div><b>First large fault-tolerant machine, by plan</b><span>IBM targets Starling: 200 logical qubits and 100 million operations. Other companies publish their own targets, and these are plans, not guarantees.</span></div></li>
+            <li><span class="yr">2030</span><span class="dot"></span><div><b>Start of the RSA and ECC phase-out</b><span>Under NIST guidance, quantum-vulnerable algorithms are deprecated after 2030.</span></div></li>
+            <li><span class="yr">2030s</span><span class="dot"></span><div><b>Larger logical machines</b><span>IBM’s Blue Jay is described with 2,000 logical qubits and a billion operations, without a firm date in its announcement. This is the scale where chemistry and materials results become plausible.</span></div></li>
+            <li><span class="yr">2035</span><span class="dot"></span><div><b>RSA and ECC disallowed in NIST guidance</b><span>Systems that need long-term secrecy have to migrate well before then.</span></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="callout" style="margin-top:12px"><b>Read dates carefully.</b> Hardware dates are company targets and have slipped before. Standards dates are policy. Predictions about when a machine will break RSA-2048 vary widely, and published resource estimates have fallen over time, for example to under one million noisy physical qubits in a 2025 analysis by Craig Gidney.</div>
+
+      <h3 class="sub">Where it may be used in the future</h3>
+      <div class="tiltgrid g4">
+        <article class="tilt"><h3>Designing medicines</h3><p>Accurate simulation of how a drug binds to a protein, including quantum effects that classical force fields miss, could shorten the search for candidates.</p></article>
+        <article class="tilt"><h3>New materials</h3><p>Room-temperature superconductors, better magnets, lighter and safer batteries and efficient solar absorbers are all searches through quantum-mechanical possibility space.</p></article>
+        <article class="tilt"><h3>Cleaner industry</h3><p>Catalysts for fertiliser, hydrogen and carbon capture could cut a large share of industrial energy use if simulation can guide their design.</p></article>
+        <article class="tilt"><h3>Fusion and energy systems</h3><p>Plasma dynamics and materials for reactor walls are very hard to simulate. Quantum algorithms for differential equations are an active research area.</p></article>
+        <article class="tilt"><h3>A quantum internet</h3><p>Entanglement distribution between cities would allow secure communication, networked sensors with higher precision, and cloud access to quantum computers with private data.</p></article>
+        <article class="tilt"><h3>Distributed quantum computing</h3><p>Linking many smaller processors with photonic interconnects may scale further than a single chip can.</p></article>
+        <article class="tilt"><h3>GPS-free navigation</h3><p>Compact cold-atom inertial sensors could keep ships, aircraft and vehicles on course for hours without satellite signals.</p></article>
+        <article class="tilt"><h3>Earth and health sensing</h3><p>Gravimeters for mapping aquifers and tunnels, and magnetometers that read brain and heart signals without shielded rooms.</p></article>
+      </div>
+
+      <h3 class="sub">What could slow it down</h3>
+      <div class="twocol">
+        <ul class="prose" style="margin:0;padding-left:1.2em;color:var(--body);display:grid;gap:10px">
+          <li><b>Error rates.</b> Algorithms that matter need logical error rates near 10⁻¹² or lower, many orders of magnitude below today’s physical qubits.</li>
+          <li><b>Overhead.</b> Each logical qubit may need hundreds to thousands of physical qubits, depending on the code and the hardware.</li>
+          <li><b>Engineering.</b> Wiring, cooling, lasers, real-time decoding and manufacturing yield all have to scale together.</li>
+        </ul>
+        <ul class="prose" style="margin:0;padding-left:1.2em;color:var(--body);display:grid;gap:10px">
+          <li><b>Algorithms.</b> Few problems have a proven large speedup. Finding more, and showing they beat the best classical methods, is open research.</li>
+          <li><b>Data loading and readout.</b> Getting big classical data in, and big answers out, can erase a speedup.</li>
+          <li><b>People.</b> The field needs engineers who understand both quantum physics and large-scale software and hardware.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="myths">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Common myths</span>
+        <h2>Six things people get wrong</h2>
+      </div>
+      <div class="cols3" style="border-top:1px solid var(--ink)">
+        <div><h3>“It tries every answer at once.”</h3><p>A register of n qubits holds 2ⁿ amplitudes, but a measurement returns only one n-bit result. Algorithms work by interference that makes the right answer likely, not by reading all branches.</p></div>
+        <div><h3>“It will replace my laptop.”</h3><p>Quantum computers are slow at ordinary tasks and need delicate, expensive infrastructure. They will sit in data centres as accelerators for a few kinds of work.</p></div>
+        <div><h3>“It will break all encryption tomorrow.”</h3><p>Breaking RSA-2048 needs a large fault-tolerant machine that does not exist yet. Symmetric encryption such as AES-256 is only weakened by a square root. Migration to post-quantum standards is under way.</p></div>
+        <div><h3>“It speeds up everything.”</h3><p>Most problems have no known quantum speedup. Many known ones are only quadratic, and that is often not enough to cover the overhead of error correction.</p></div>
+        <div><h3>“Entanglement sends messages faster than light.”</h3><p>Measurement results on each side look random. They only show a correlation once the two sides compare notes by ordinary communication, which is no faster than light.</p></div>
+        <div><h3>“More qubits always means better.”</h3><p>Quality matters as much as count. Gate fidelity, connectivity, coherence, readout and the ability to run error correction decide what a machine can do.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="path">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Learning path</span>
+        <h2>Five levels, in the order a working quantum engineer learns them</h2>
+        <p>Tick topics off as you finish them. Progress is saved in this browser only.</p>
+      </div>
+      <div class="progress"><span>Overall progress</span><div class="bar"><i id="overall-bar"></i></div><strong id="overall-txt"></strong></div>
+      <div class="tabs" id="tabs" role="tablist" aria-label="Levels"></div>
+      <div class="panel" id="panel" role="tabpanel"></div>
+
+      <h3 class="sub">The gates you will use in every circuit</h3>
+      <div class="gtable" id="gtable"></div>
+      <p class="gnote">CNOT rows and columns are ordered |00⟩, |01⟩, |10⟩, |11⟩ with the control qubit written first. H, S and CNOT generate the Clifford group. Adding T makes the set universal.</p>
+    </div>
+  </section>
+
+  <section id="practice">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Practice questions</span>
+        <h2>Check your understanding before you move up a level</h2>
+        <p>Pick a level or take them all. Every answer comes with an explanation. Scoring 80% or more is a good sign you can move on.</p>
+      </div>
+      <div class="quiz">
+        <div class="chips" id="qchips" role="group" aria-label="Choose level"></div>
+        <div id="qbody"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Suggested projects</span>
+        <h2>Build something at every level</h2>
+        <p>These are ideas to pick from, not step-by-step tutorials. Finish one project per level and you will have a portfolio that shows real depth.</p>
+      </div>
+      <div class="chips" id="pchips" role="group" aria-label="Filter projects by level"></div>
+      <div class="pgrid" id="pgrid"></div>
+    </div>
+  </section>
+
+  <section id="resources">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">Tools and reading</span>
+        <h2>What to install and what to read</h2>
+        <p>Pick one SDK and stay with it for a while. The concepts transfer between all of them.</p>
+      </div>
+      <div class="rgrid">
+        <div><h3>Software</h3><ul class="rlist" id="tools"></ul></div>
+        <div><h3>Reading</h3><ul class="rlist" id="books"></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+</div>
+<div class="divider"><div class="k">Part II</div><h2>The 3D course and Quantum Lab</h2><p>Twenty-six step-by-step modules, an immersive 3D universe, eleven hands-on challenges, a roadmap, glossary, quiz and projects.</p></div>
+<div class="qh-a"><div class="hero" id="universe"><canvas id="hero3dA"></canvas><div><span class="lv">From basic to advanced</span><h1>Master Quantum Technology</h1><p>Twenty-six modules, fifteen live simulations, an interactive Quantum Lab with eleven challenges, an immersive 3D universe, a roadmap, glossary, quiz and twelve projects – computing, communication, sensing, hardware and the future, explained step by step.</p><a class="cta" href="#m1">Start learning</a><a class="cta g" href="#qlab">Enter the Quantum Lab</a><a class="cta g" href="#proj">See projects</a></div></div>
+<nav id="nv"><b>⚛ QuantumHub</b></nav>
+<main><div id="mods"></div>
+<section id="qlab"><span class="lv Advanced">Hands-on</span><h2>⚗ Quantum Lab – you run the experiments</h2><p class="sub">Everything you learned above is now yours to try. Set the inputs, run the experiment, read the results and complete the challenges. Progress: <b id="lp">0</b> / 11 challenges completed.</p><div class="card"><div class="btns" id="lt"></div><div id="lb"></div></div></section>
+<section id="road"><span class="lv">Your path</span><h2>Learning Roadmap & Glossary</h2><div class="grid"><div class="card"><span class="lv">Level 1 · Basic</span><ul><li>Maths: complex numbers, vectors, matrices, probability</li><li>Python + NumPy</li><li>Modules 1–4, then Bloch, entanglement and circuit sims</li><li>Run a Bell state in Qiskit</li></ul></div><div class="card"><span class="lv Intermediate">Level 2 · Intermediate</span><ul><li>Tensor products, unitaries, density matrices</li><li>Gates, Grover, QFT, teleportation, BB84</li><li>Annealing, software stack, information theory</li><li>Projects: Grover solver, BB84 with Eve</li></ul></div><div class="card"><span class="lv Advanced">Level 3 · Advanced</span><ul><li>Shor, QPE, VQE, QAOA, QSVT</li><li>Stabiliser codes, surface code, decoders</li><li>Complexity, simulation, networks, quantum ML</li><li>Projects: VQE for H₂, neural decoder, surface-code simulator</li></ul></div><div class="card"><span class="lv Advanced">Level 4 · Research</span><ul><li>Read arXiv quant-ph weekly; reproduce a paper</li><li>Pick a niche: hardware, codes, algorithms, networks, sensing or QML</li><li>Books: Nielsen & Chuang; Preskill’s notes; Aaronson’s lectures; Susskind’s Theoretical Minimum</li><li>Contribute to Qiskit, PennyLane or Stim</li></ul></div></div><div class="card" style="margin-top:18px"><h3 style="margin-top:0">Glossary</h3><p class="sub"><b>Amplitude</b> complex number whose squared size is a probability · <b>Basis</b> reference set of states · <b>BQP</b> problems quantum computers solve efficiently · <b>Coherence</b> preserved phase relations · <b>Decoherence</b> loss of coherence to the environment · <b>Fidelity</b> overlap between states or accuracy of an operation · <b>Hamiltonian</b> energy operator governing evolution · <b>Hilbert space</b> state space of a system · <b>Logical qubit</b> error-protected qubit built from many physical ones · <b>NISQ</b> noisy intermediate-scale quantum era · <b>Observable</b> measurable quantity · <b>Syndrome</b> error-revealing parity measurement · <b>Tomography</b> reconstructing a state from measurements · <b>Transpilation</b> compiling a circuit to hardware · <b>Unitary</b> reversible, probability-preserving operation · <b>Qudit</b> d-level generalisation of a qubit · <b>Clifford gates</b> efficiently simulable gate set (H, S, CNOT) · <b>Magic state</b> resource enabling non-Clifford T gates.</p></div></section>
+<section id="quiz"><span class="lv">Test yourself</span><h2>Concept Quiz</h2><div class="card" id="qz"></div></section>
+<section id="proj"><span class="lv Intermediate">Build it</span><h2>Suggested Projects</h2><p class="sub">Progress from beginner to research-grade. Free tools: Qiskit, Cirq, PennyLane, IBM Quantum, Amazon Braket.</p><div class="pj" id="pj"></div></section></main>
+
+<footer>QuantumHub · Learn it · Simulate it · Build it. Roadmap dates are industry estimates, not guarantees.</footer></div>
+<div class="divider"><div class="k">Part III</div><h2>Learning platforms and simulation studio</h2><p>What IBM, Microsoft, Google and Qiskit offer, a live study planner, a 3D Qiskit stack and five extra simulations.</p></div>
+
+<div class="qh-c">
+<section id="platforms"><div class="w">
+<span class="ey">Learning platforms</span><h2>What IBM, Microsoft, Google and Qiskit teach and offer</h2>
+<p class="lead">Four of the main places to learn quantum technology for free or to run real experiments. This is a summary of what each currently offers, with links so you can open the originals.</p>
+<div class="g2">
+<article class="cd"><span class="tag">IBM Quantum Learning</span><h3>10+ courses built around Qiskit</h3><p>A library of self-paced courses by IBM and outside experts. It starts with a quick-start path, then a four-course foundations series taught by John Watrous, then applied courses and two business courses.</p><ul><li>Get started: <i>Use a quantum computer today</i> (5 h) and <i>Quantum computing in practice</i> (8 h, for processors with 100+ qubits).</li><li>Foundations series: quantum information, quantum algorithms, general formulation of quantum information, and error correction (15 h each).</li><li>Applied: tools for quantum advantage, quantum plus HPC, diagonalization algorithms, quantum machine learning, variational algorithm design, chemistry with VQE and utility-scale computing.</li></ul><p><a href="https://quantum.cloud.ibm.com/learning/en/courses" target="_blank" rel="noopener">Open IBM Quantum Learning</a></p></article>
+<article class="cd"><span class="tag">Microsoft Learn</span><h3>Get started with Azure Quantum (6 modules)</h3><p>A beginner-to-advanced learning path for developers. You learn the qubit, write Q# programs with the Quantum Development Kit, then run on real hardware through the Azure Quantum cloud.</p><ul><li>Introduction to quantum computing with Azure Quantum</li><li>Choosing the best Azure Quantum option for your needs</li><li>Your first Q# program: a quantum random number generator</li><li>Quantum superposition and the Bloch sphere in Q#</li><li>Teleporting entangled qubits (Alice and Bob) in Q#</li><li>Estimating physical resources with the Microsoft Quantum resource estimator</li></ul><p>Prerequisites: basic Azure knowledge, basic linear algebra, familiarity with Visual Studio Code. <a href="https://learn.microsoft.com/en-us/training/paths/quantum-computing-fundamentals/" target="_blank" rel="noopener">Open the path</a></p></article>
+<article class="cd"><span class="tag">Google Quantum AI</span><h3>Hardware, research and education</h3><p>Google builds superconducting quantum chips and open software. Its site covers hardware, a roadmap, the Cirq library, research papers and learning resources.</p><ul><li><b>Willow:</b> a chip aimed at large-scale error correction, with a published spec sheet.</li><li><b>Quantum Echoes:</b> an algorithm on Willow that Google presents as the first verifiable quantum advantage (published in Nature).</li><li><b>Magic state cultivation</b> on Willow, a technique for the non-Clifford gates error-corrected machines need.</li><li><b>Neutral-atom work</b> alongside its superconducting program, and a Willow Early Access Program call for proposals.</li><li><b>Learning:</b> a hands-on error-correction course on Coursera and the Cirq documentation.</li></ul><p><a href="https://quantumai.google/" target="_blank" rel="noopener">Open Google Quantum AI</a></p></article>
+<article class="cd"><span class="tag">IBM Qiskit</span><h3>The open-source quantum SDK</h3><p>Qiskit builds, optimises and runs quantum workloads. Install it with <code>pip install qiskit</code>. The site announces release 2.6 and lists these headline figures (IBM's own claims, or citing a Unitary Foundation survey and the Benchpress toolkit):</p><div class="kv"><div><b>27M</b><span>downloads</span></div><div><b>74%</b><span>prefer it as main SDK (survey)</span></div><div><b>133x</b><span>faster transpiling (Benchpress)</span></div><div><b>8K+</b><span>dependent projects</span></div></div><p><a href="https://www.ibm.com/quantum/qiskit" target="_blank" rel="noopener">Open Qiskit</a></p></article>
+</div></div></section>
+
+<section id="courses"><div class="w">
+<span class="ey">Course catalogue</span><h2>Build your own study plan from the IBM courses</h2>
+<p class="lead">Tick the courses you want. The total hours update live. Filter by group.</p>
+<div class="chips" id="cf"></div>
+<div class="g2" style="grid-template-columns:1fr 280px;align-items:start"><div id="cl"></div>
+<div class="cd" style="position:sticky;top:76px"><h3>Your plan</h3><div class="big" id="ch">0 h</div><p id="cn" style="color:var(--mut)">No courses selected.</p><div style="height:10px;background:var(--sf2);border-radius:6px;overflow:hidden"><i id="cb" style="display:block;height:100%;width:0;background:linear-gradient(90deg,var(--tl),var(--vi));transition:width .3s"></i></div><p style="margin-top:10px;font-size:13px;color:var(--mut)">At 5 hours a week this is <b id="cw">0</b> weeks.</p></div></div>
+</div></section>
+
+<section id="qiskit"><div class="w">
+<span class="ey">Qiskit stack in 3D</span><h2>Three layers of tools, from experiments to supercomputers</h2>
+<p class="lead">Click a layer, or hover over it, to see the tools. The stack floats and tilts on its own.</p>
+<div class="g2" style="grid-template-columns:minmax(300px,1fr) minmax(300px,1fr);align-items:center">
+<div class="stage" id="stg"><div class="stack"><div class="ly" data-i="0">Algorithm development</div><div class="ly" data-i="1">Heterogeneous orchestration</div><div class="ly on" data-i="2">Quantum information science</div></div></div>
+<div class="cd" id="lyi"></div></div>
+<div class="chips" style="margin-top:20px"><span class="tag">Map</span><span class="tag">Optimize</span><span class="tag">Execute</span><span class="tag">Post-process</span><span style="color:var(--mut);font-size:14px">The four steps of a Qiskit addons workflow: map the problem to circuits, optimise them, run them with primitives, then post-process the results (for example with sample-based quantum diagonalization).</span></div>
+<h3 style="margin-top:26px">Hardware providers Qiskit can target</h3><div class="chips"><span class="tag">IBM Quantum</span><span class="tag">IonQ</span><span class="tag">Amazon Braket</span><span class="tag">Azure Quantum</span><span class="tag">IQM</span><span class="tag">Rigetti</span><span class="tag">Quantinuum</span><span class="tag">Superstaq</span><span class="tag">AQT</span><span class="tag">Alice &amp; Bob</span></div>
+<h3 style="margin-top:20px">Applied tutorials from the Qiskit site</h3>
+<div class="g3"><div class="cd"><b>Optimisation</b><p>Quantum Approximate Optimization Algorithm (QAOA) for combinatorial problems.</p></div><div class="cd"><b>Simulation</b><p>Sample-based quantum diagonalization of a chemistry Hamiltonian, using quantum and HPC together.</p></div><div class="cd"><b>Machine learning</b><p>Quantum kernel training to boost classical machine learning.</p></div><div class="cd"><b>Differential equations</b><p>Modelling a flowing non-viscous fluid with variational quantum methods (QUICK-PDE).</p></div></div>
+<h3 style="margin-top:20px">Community</h3><p>Qiskit has a Slack community, events such as Fall Fest, an ecosystem of community extensions and an advocate programme with well over a thousand members in more than 70 countries.</p>
+</div></section>
+
+<section id="googleq"><div class="w">
+<span class="ey">Google Quantum AI</span><h2>From Willow to verifiable advantage</h2>
+<div class="g3"><div class="cd"><span class="tag">Chip</span><h3>Willow</h3><p>A superconducting processor built to show that adding qubits to an error-correcting code can reduce errors, a key step toward large fault-tolerant machines.</p></div><div class="cd"><span class="tag">Algorithm</span><h3>Quantum Echoes</h3><p>An algorithm on Willow that Google describes as the first verifiable quantum advantage, meaning the result can be checked by repeating it on another quantum computer.</p></div><div class="cd"><span class="tag">Technique</span><h3>Magic state cultivation</h3><p>A method for preparing the special states that give error-corrected machines their non-Clifford gates, demonstrated on Willow.</p></div><div class="cd"><span class="tag">Hardware</span><h3>Two platforms</h3><p>Google now describes work on both superconducting and neutral-atom quantum computers.</p></div><div class="cd"><span class="tag">Access</span><h3>Willow Early Access</h3><p>A call for proposals for researchers who want to run experiments on Willow.</p></div><div class="cd"><span class="tag">Software</span><h3>Cirq</h3><p>Google's open-source Python library for writing, simulating and running quantum circuits.</p></div></div>
+</div></section>
+
+<section id="studio"><div class="w">
+<span class="ey">Simulation studio</span><h2>Five extra live simulations</h2>
+<p class="lead">All of them run in your browser. Drag the 3D views to rotate them.</p>
+<div class="g2">
+<div class="sim"><h3>1. Qiskit-style circuit composer (3 qubits, 3D)</h3><p>Pick a qubit, add gates, and watch the 3D probability bars and the shot counts change.</p><div class="row"><label>Qubit <select id="cq"><option value="0">q0</option><option value="1">q1</option><option value="2">q2</option></select></label><button data-g="H">H</button><button data-g="X">X</button><button data-g="Z">Z</button><button data-g="S">S</button><button data-g="T">T</button><button data-g="CX">CNOT →next</button></div><div class="row"><button id="cbell">Bell pair</button><button id="cghz">GHZ</button><button id="cun">Undo</button><button id="crs">Reset</button><button id="csh">Run 1024 shots</button></div><canvas id="cc" width="560" height="300"></canvas><div class="ro" id="cr"></div></div>
+
+<div class="sim"><h3>2. Transpiler routing on a 3D qubit lattice</h3><p>Two qubits that are not neighbours need SWAP gates. See the route and the fidelity cost.</p><div class="row"><label>From <select id="ra"></select></label><label>To <select id="rb"></select></label><button id="rr">Random pair</button><label>2-qubit error <select id="re"><option value="0.001">0.1%</option><option value="0.005" selected>0.5%</option><option value="0.01">1%</option></select></label></div><canvas id="rc" width="560" height="300"></canvas><div class="ro" id="rt"></div></div>
+
+<div class="sim"><h3>3. Quantum walk against classical walk</h3><p>The quantum walker spreads in proportion to the number of steps, the classical one only to its square root.</p><div class="row"><button id="wpl">Run / pause</button><button id="ws">Step</button><button id="wr">Reset</button></div><canvas id="wc" width="560" height="260"></canvas><div class="ro" id="wt"></div></div>
+
+<div class="sim"><h3>4. Error-correction resource estimator</h3><p>Rough surface-code estimate in the spirit of the Microsoft resource estimator. Model: threshold 1%, logical error 0.1·(p/0.01)^((d+1)/2), 2(d+1)² physical qubits per logical qubit, 1 µs per round.</p><label>Logical qubits: <b id="eqv"></b><input type="range" id="eq" min="1" max="4" step="0.05" value="2.7"></label><label>T gates (log10): <b id="etv"></b><input type="range" id="et" min="3" max="15" step="0.5" value="9"></label><label>Physical error rate: <b id="epv"></b><input type="range" id="ep" min="-4" max="-2.1" step="0.05" value="-3"></label><canvas id="ec" width="560" height="220"></canvas><div class="ro" id="er"></div></div>
+
+<div class="sim" style="grid-column:1/-1"><h3>5. Learning-path planner</h3><p>Choose a goal and get an ordered list from the IBM, Microsoft, Google and Qiskit resources above.</p><div class="row"><label>Goal <select id="pg"><option value="basics">Understand the basics</option><option value="code">Write quantum programs</option><option value="algo">Study algorithms</option><option value="qec">Error correction and hardware</option><option value="lead">Lead a quantum project</option></select></label><label>Hours per week <select id="pw"><option>3</option><option selected>5</option><option>10</option><option>20</option></select></label></div><ol class="pl" id="po" style="color:#E8F0F6"></ol><div class="ro" id="pt"></div></div>
+</div></div></section>
+</div>
+
+
+
+<div class="qh-d"><div class="adslot" data-slot="mid"></div><section id="kb"><div class="w"><span class="ey">Knowledge base</span><h2>Quantum technology from beginner to advanced</h2><p class="lead">Nine topics, each with three levels, a key formula and a worked example. Press “Try it” to open a matching live 3D simulation at the top of the page.</p><div class="kbg"><details class="kbd"><summary><b>Quantum computing</b></summary><p><span class="tg">Beginner</span>A classical bit is 0 or 1. A qubit can be in a superposition of both, and n qubits hold 2ⁿ amplitudes at once.</p><p><span class="tg">Intermediate</span>Quantum computers use interference: algorithms arrange amplitudes so wrong answers cancel and right answers add. They do not try every answer and pick one.</p><p><span class="tg">Advanced</span>Useful speedups come from structure (period finding, amplitude amplification, simulation of quantum systems), not from raw parallelism. Noise limits circuit depth today.</p><div class="fm2">|ψ⟩ = α|0⟩ + β|1⟩,  |α|² + |β|² = 1</div><p><b>Example:</b> 3 qubits = 8 amplitudes; 50 qubits = about 10¹⁵ amplitudes.</p><p><button type="button" class="try" data-q="What is superposition?">Try it in 3D</button> <a href="#m1">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum mechanics</b></summary><p><span class="tg">Beginner</span>Particles are described by a wavefunction. The Born rule says |ψ|² gives the probability of finding the particle at a place.</p><p><span class="tg">Intermediate</span>The Schrödinger equation governs how ψ changes in time. Observables are operators; measuring one gives an eigenvalue at random.</p><p><span class="tg">Advanced</span>The uncertainty principle comes from non-commuting operators: position and momentum cannot both be sharp.</p><div class="fm2">iħ ∂ψ/∂t = Ĥψ,   Δx·Δp ≥ ħ/2</div><p><b>Example:</b> An electron in hydrogen occupies orbitals, not orbits.</p><p><button type="button" class="try" data-q="Show me a hydrogen atom orbital">Try it in 3D</button> <a href="#m3">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum physics</b></summary><p><span class="tg">Beginner</span>Energy comes in packets. Light of frequency f carries energy E = hf, which explains the photoelectric effect.</p><p><span class="tg">Intermediate</span>Matter behaves like a wave with wavelength λ = h/p, shown by electron diffraction and the double-slit experiment.</p><p><span class="tg">Advanced</span>Bound systems have discrete energies, such as hydrogen&#x27;s levels, which produce spectral lines.</p><div class="fm2">E = hf,   λ = h/p,   Eₙ = −13.6 eV / n²</div><p><b>Example:</b> Electrons fired one at a time still build up interference fringes.</p><p><button type="button" class="try" data-q="Explain the double-slit experiment">Try it in 3D</button> <a href="#m3">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum algorithms</b></summary><p><span class="tg">Beginner</span>Grover search finds a marked item among N in about √N steps. Shor&#x27;s algorithm factors integers by finding a hidden period.</p><p><span class="tg">Intermediate</span>Quantum Fourier transform, phase estimation and amplitude amplification are the building blocks. Variational algorithms (VQE, QAOA) mix a quantum circuit with a classical optimiser.</p><p><span class="tg">Advanced</span>Shor runs in polynomial time, about O((log N)³) gates, versus super-polynomial for the best known classical methods. Grover&#x27;s speedup is only quadratic and is provably optimal for unstructured search.</p><div class="fm2">k ≈ (π/4)√N,    P = sin²((2k+1)θ),  sin θ = 1/√N</div><p><b>Example:</b> Searching 1,000,000 items: about 785 Grover iterations versus about 500,000 classical checks.</p><p><button type="button" class="try" data-q="How does Grover&#x27;s algorithm search faster?">Try it in 3D</button> <a href="#m8">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum cryptography</b></summary><p><span class="tg">Beginner</span>Quantum key distribution (BB84, E91) lets two people share a secret key. Eavesdropping disturbs the photons and is detected.</p><p><span class="tg">Intermediate</span>The no-cloning theorem forbids copying an unknown quantum state, which is why interception leaves traces. A key is usually abandoned if the error rate exceeds roughly 11%.</p><p><span class="tg">Advanced</span>Shor&#x27;s algorithm threatens RSA and elliptic-curve encryption, so standards bodies have published post-quantum algorithms (for example NIST&#x27;s ML-KEM and ML-DSA, 2024) that run on ordinary computers.</p><div class="fm2">QBER &gt; ~11% ⇒ discard key (BB84, ideal case)</div><p><b>Example:</b> Banks and governments already pilot QKD links; most organisations are migrating to post-quantum cryptography instead.</p><p><button type="button" class="try" data-q="What is entanglement and the Bell test?">Try it in 3D</button> <a href="#m11">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum communication</b></summary><p><span class="tg">Beginner</span>Entangled pairs let you teleport a quantum state: one Bell pair plus two classical bits move a qubit from Alice to Bob. No matter or faster-than-light signal is sent.</p><p><span class="tg">Intermediate</span>Photons lose signal in fibre, so long links need quantum repeaters or satellites.</p><p><span class="tg">Advanced</span>Satellite experiments have distributed entanglement over more than 1,000 km. A quantum internet would link quantum computers and sensors.</p><div class="fm2">|Φ⁺⟩ = (|00⟩ + |11⟩)/√2</div><p><b>Example:</b> Teleportation needs a classical channel, so it cannot send information faster than light.</p><p><button type="button" class="try" data-q="What is entanglement and the Bell test?">Try it in 3D</button> <a href="#m11">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum AI</b></summary><p><span class="tg">Beginner</span>Quantum machine learning uses parameterised circuits whose settings are tuned by a classical optimiser, much like training a neural network.</p><p><span class="tg">Intermediate</span>Quantum kernels map data into a huge quantum feature space. Gradients can be measured with the parameter-shift rule.</p><p><span class="tg">Advanced</span>Open problems: loading classical data is costly, and barren plateaus (vanishing gradients) make training hard. Proven advantages are mostly for quantum data.</p><div class="fm2">∂⟨O⟩/∂θ = ½[⟨O⟩(θ+π/2) − ⟨O⟩(θ−π/2)]</div><p><b>Example:</b> Classifying molecular states measured from a quantum sensor.</p><p><button type="button" class="try" data-q="How does a qubit work?">Try it in 3D</button> <a href="#m12">Read the full module</a></p></details><details class="kbd"><summary><b>Quantum hardware</b></summary><p><span class="tg">Beginner</span>Qubits are built from superconducting circuits, trapped ions, neutral atoms, photons or electron spins.</p><p><span class="tg">Intermediate</span>Key numbers: coherence times T₁ and T₂, gate fidelity, qubit connectivity and clock speed.</p><p><span class="tg">Advanced</span>Error correction (for example the surface code) groups many physical qubits into one logical qubit. It works when the physical error rate is below a threshold of roughly 1%.</p><div class="fm2">p_logical ≈ 0.1·(p/p_th)^((d+1)/2)</div><p><b>Example:</b> Going from distance d = 3 to d = 5 cuts logical errors again if p is well below threshold.</p><p><button type="button" class="try" data-q="How does a qubit work?">Try it in 3D</button> <a href="#m9">Read the full module</a></p></details><details class="kbd"><summary><b>Emerging quantum technologies</b></summary><p><span class="tg">Beginner</span>Quantum sensors use superposition to measure magnetic fields, gravity and time with extreme precision.</p><p><span class="tg">Intermediate</span>Post-quantum cryptography, quantum networks and quantum simulation of chemistry and materials are advancing fast.</p><p><span class="tg">Advanced</span>The field is moving from noisy devices toward error-corrected logical qubits; claims of quantum advantage are checked against the best classical algorithms.</p><div class="fm2">Δφ ∝ 1/N (Heisenberg limit)  vs  1/√N (classical)</div><p><b>Example:</b> Diamond NV-centre sensors image magnetic fields inside living cells.</p><p><button type="button" class="try" data-q="Show me a qubit on the Bloch sphere">Try it in 3D</button> <a href="#m13">Read the full module</a></p></details></div></div></section><section id="faq"><div class="w"><span class="ey">FAQ</span><h2>Frequently asked questions</h2><div class="kbg"><details class="kbd"><summary><b>What is a qubit?</b></summary><p>A qubit is the basic unit of quantum information. Unlike a bit, it can be in a superposition of 0 and 1 until it is measured.</p></details><details class="kbd"><summary><b>Is quantum computing faster than classical computing for everything?</b></summary><p>No. Quantum computers give large speedups only for specific problems, such as factoring, simulating quantum systems and some search and optimisation tasks. For everyday tasks classical computers remain better.</p></details><details class="kbd"><summary><b>Can quantum computers break encryption today?</b></summary><p>Not yet. Breaking RSA-2048 would need a large error-corrected machine that does not exist. Published resource estimates have fallen over the years, which is why organisations are moving to post-quantum cryptography now.</p></details><details class="kbd"><summary><b>What is quantum entanglement?</b></summary><p>Entanglement is a correlation between quantum systems that cannot be explained by classical shared information. Measuring one part is correlated with the other, but it cannot be used to send messages faster than light.</p></details><details class="kbd"><summary><b>How can I learn quantum computing for free?</b></summary><p>Start with this site&#x27;s modules and simulations, then try free courses such as IBM Quantum Learning with Qiskit and the Microsoft Learn Azure Quantum path. A little linear algebra helps.</p></details><details class="kbd"><summary><b>What is a quantum algorithm?</b></summary><p>A quantum algorithm is a step-by-step procedure for a quantum computer that uses superposition, entanglement and interference to solve a problem, for example Grover&#x27;s search or Shor&#x27;s factoring.</p></details></div></div></section><section id="pricing"><div class="w"><span class="ey">Plans</span><h2>Free to learn. Pro for serious builders.</h2><p class="lead">Everything on this site stays free. Paid plans are planned for deeper material and team features. Join the waitlist to be told when they open. The prices below are examples, not final.</p>
+<div class="plg"><div class="pc"><h3>Free</h3><div class="pr">$0</div><ul><li>All modules and simulations</li><li>AI simulation generator</li><li>Local profile and question history</li></ul></div>
+<div class="pc hot"><h3>Pro <small>coming soon</small></h3><div class="pr">$9<small>/mo example</small></div><ul><li>Ad-free reading</li><li>Saved progress across devices</li><li>Downloadable cheat sheets and notebooks</li><li>Early access to new simulations</li></ul></div>
+<div class="pc"><h3>Teams and schools <small>coming soon</small></h3><div class="pr">Contact</div><ul><li>Classroom dashboards</li><li>Custom courses</li><li>Bulk seats</li></ul></div></div>
+<form class="wl" id="wl"><input type="email" id="wle" placeholder="Your email for the waitlist" required aria-label="Email"><select id="wlp" aria-label="Plan"><option>Pro</option><option>Teams and schools</option></select><button type="submit" class="btn">Join waitlist</button></form><p id="wlm" style="color:var(--am);min-height:22px"></p></div></section><div class="adslot" data-slot="end"></div></div>
+
+<div class="qh-b"><footer>
+  <div class="wrap">
+    <div>Quantum Hub is a self-study guide. Hardware, SDKs and standards change quickly, so check current documentation before you start a project.</div>
+    <div class="src">
+      <span>Sources used for the roadmap and standards dates:</span>
+      <a href="https://thequantuminsider.com/2025/06/10/ibm-offers-roadmap-toward-large-scale-fault-tolerant-quantum-computer/" target="_blank" rel="noopener">IBM fault-tolerant roadmap (The Quantum Insider, June 2025)</a>
+      <a href="https://quantumcomputingreport.com/nist-releases-final-ir-8547-establishing-definitive-post-quantum-cryptography-transition-timeline-and-deprecation-schedules/" target="_blank" rel="noopener">NIST IR 8547 transition timeline (Quantum Computing Report)</a>
+      <a href="https://newsroom.ibm.com/2026-07-30-ibm-and-the-university-of-chicago-demonstrate-quantum-advantage,-establishing-trusted-quantum-computation-on-logical-circuits" target="_blank" rel="noopener">IBM and University of Chicago announcement, 30 July 2026 (company press release)</a>
+    </div>
+  </div>
+</footer>
+
+</div>
